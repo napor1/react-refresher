@@ -1,0 +1,8 @@
+.demo-task-wrapper {
+  display: flex;
+  gap: 10px;
+  .sub-wrapper {
+    flex: 1;
+    border: 1px solid black;
+  }
+}
