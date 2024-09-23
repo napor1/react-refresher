@@ -1,4 +1,4 @@
-import { IUserData } from "./Page";
+import { IUserData } from ".";
 
 interface IParams {
   userData: IUserData;

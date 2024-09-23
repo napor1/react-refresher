@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { RadioGroup } from "./RadioGroup";
 
-export function Page() {
+export default function Page() {
   const [data, setData] = useState({
     meal: "",
     bread: "",

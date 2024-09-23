@@ -7,7 +7,7 @@ export interface IUserData {
   email: string;
 }
 
-export function Page() {
+export default function Page() {
   const [isEditable, setIsEditable] = useState<boolean>(false);
   const [userData, setUserData] = useState<IUserData>({
     name: "",
