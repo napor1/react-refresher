@@ -19,20 +19,11 @@ const MY_COOL_PLAYLIST = [
 export default function Page() {
   const [list, setList] = useState<Song[]>([]);
 
-  const confirm = () => {
-    console.log("OLD", MY_COOL_PLAYLIST);
-  };
-
   useEffect(() => {
     setTimeout(() => {
       setList(MY_COOL_PLAYLIST);
     }, 1000);
   }, []);
 
-  return (
-    <>
-      <PlayList songs={list} />
-      <button onClick={() => confirm()}>Confirm</button>
-    </>
-  );
+  return <PlayList songs={list} />;
 }
