@@ -9,6 +9,10 @@ export default defineConfig({
       {
         dir: 'src/demos',
         baseRoute: 'demos',
+      },
+      {
+        dir: 'src/apps',
+        baseRoute: 'apps'
       }
     ]
   })],

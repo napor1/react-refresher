@@ -1,7 +1,5 @@
-import { useEffect, useState } from "react";
 import { PlayList } from "./PlayList";
 import "./index.css";
-import { Song } from "./types";
 
 const MY_COOL_PLAYLIST = [
   { id: 1, title: "Rock You Like a Hurricane", artist: "Scorpions" },
@@ -17,13 +15,13 @@ const MY_COOL_PLAYLIST = [
 ];
 
 export default function Page() {
-  const [list, setList] = useState<Song[]>([]);
+  // const [list, setList] = useState<Song[]>([]);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setList(MY_COOL_PLAYLIST);
-    }, 1000);
-  }, []);
+  // useEffect(() => {
+  //   setList(MY_COOL_PLAYLIST);
+  // }, []);
 
-  return <PlayList songs={list} />;
+  // console.log(list)
+
+  return <PlayList songs={MY_COOL_PLAYLIST} />;
 }

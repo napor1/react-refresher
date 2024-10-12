@@ -6,6 +6,7 @@ import {
 } from "react-icons/bi";
 import { ActionType, Song } from "./types";
 import { memo } from "react";
+import style from './item.module.css'
 
 interface PlayListItemProps {
   index: number;
@@ -27,7 +28,7 @@ export const PlayListItem = memo(function PlayListItem({
   return (
     <li>
       <span>{index}</span>
-      <p>
+      <p className={style['item-bg']}>
         <strong>{song.title}</strong> by <em>{song.artist}</em>
       </p>
       <button onClick={onClick("up")}>
