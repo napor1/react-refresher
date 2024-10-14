@@ -7,7 +7,7 @@ type ActionMap<A> = {
 export interface Thing {
   id: string;
   name: string;
-  done: string[];
+  done: number[];
 }
 
 export interface ThingsState {
@@ -22,7 +22,12 @@ export interface ThingsContext {
     seeAllThings: unknown;
     addThing: string;
     removeThing: string;
-}>;
+    doThing: string;
+    undoThing: {
+      id: string;
+      index: number;
+    };
+  }>;
 }
 
 export const DataContext = createContext<ThingsContext | null>(null);

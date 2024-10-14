@@ -19,7 +19,6 @@ const INITIAL_STATE: ThingsState = JSON.parse(
   currentThing: null,
 };
 
-// increment: (count, { payload }) => count + payload,
 const reducers = {
   seeThing: produce<ThingsState, [Payload<string>]>(
     (draft, { payload: id }) => {
@@ -49,8 +48,22 @@ const reducers = {
       }
     }
   ),
-  // doThing
-  // undoThing
+  doThing: produce<ThingsState, [Payload<string>]>((draft, { payload: id }) => {
+    const thing = draft.things.find((thing) => thing.id === id);
+    thing!.done.push(Date.now());
+  }),
+  undoThing: produce<
+    ThingsState,
+    [
+      Payload<{
+        id: string;
+        index: number;
+      }>
+    ]
+  >((draft, { payload: { id, index } }) => {
+    const thing = draft.things.find((thing) => thing.id === id);
+    thing!.done.splice(index, 1);
+  }),
 };
 
 export function DataProvider({ children }: PropsWithChildren) {

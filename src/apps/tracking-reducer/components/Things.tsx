@@ -1,6 +1,11 @@
+import { ThingDetail } from "./ThingDetail";
+import { useCurrentThing } from "../data/useCurrentThing";
 import { AllThings } from "./AllThings";
 
 export function Things() {
-
-  return <AllThings />
+  const currentThing = useCurrentThing();
+  if (currentThing) {
+    return <ThingDetail id={currentThing} />;
+  }
+  return <AllThings />;
 }

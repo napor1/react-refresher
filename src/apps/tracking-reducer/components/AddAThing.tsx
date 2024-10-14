@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { useAddThing } from "../data"
 
 export function AddAThing() {
@@ -7,6 +8,7 @@ export function AddAThing() {
     addThing('🐤🐤🐤')
   }
   return <>
-  <button onClick={onAdd}>Add</button>
+  
+  <Button onClick={onAdd}>Add</Button>
   </>
 }

@@ -15,13 +15,5 @@ const MY_COOL_PLAYLIST = [
 ];
 
 export default function Page() {
-  // const [list, setList] = useState<Song[]>([]);
-
-  // useEffect(() => {
-  //   setList(MY_COOL_PLAYLIST);
-  // }, []);
-
-  // console.log(list)
-
   return <PlayList songs={MY_COOL_PLAYLIST} />;
 }
