@@ -4,7 +4,7 @@ import { useAddThing } from "../data";
 export function AddAThing() {
   const addThing = useAddThing();
   const onAdd = () => {
-    addThing("🐤🐤🐤");
+    addThing("🍉🍉🍉");
   };
 
   return <Button onClick={onAdd}>Add</Button>;

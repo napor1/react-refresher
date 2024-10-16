@@ -1,14 +1,10 @@
+import { Thing } from "@/apps/tracking-common/type";
 import { createContext } from "use-context-selector";
 
 type ActionMap<A> = {
   [K in keyof A]: (payload?: A[K]) => void;
 };
 
-export interface Thing {
-  id: string;
-  name: string;
-  done: number[];
-}
 
 export interface ThingsState {
   readonly things: Thing[];
