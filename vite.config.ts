@@ -14,6 +14,10 @@ export default defineConfig({
       {
         dir: 'src/apps',
         baseRoute: 'apps'
+      },
+      {
+        dir: 'src/super-gulp',
+        baseRoute: 'super'
       }
     ]
   })],
