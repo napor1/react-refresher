@@ -5,22 +5,29 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), Pages({
-    dirs: [
-      {
-        dir: 'src/demos',
-        baseRoute: 'demos',
-      },
-      {
-        dir: 'src/apps',
-        baseRoute: 'apps'
-      },
-      {
-        dir: 'src/super-gulp',
-        baseRoute: 'super'
-      }
-    ]
-  })],
+  plugins: [
+    react(),
+    Pages({
+      dirs: [
+        {
+          dir: "src/demos",
+          baseRoute: "demos",
+        },
+        {
+          dir: "src/apps",
+          baseRoute: "apps",
+        },
+        {
+          dir: "src/super-gulp",
+          baseRoute: "super",
+        },
+        {
+          dir: "src/animation",
+          baseRoute: "animation",
+        },
+      ],
+    }),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

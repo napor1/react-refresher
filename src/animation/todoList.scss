@@ -1,0 +1,28 @@
+.list-wrapper {
+  margin: 0 auto;
+  // border: 1px solid red;
+  width: 300px;
+  height: 100vh;
+  overflow-y: auto;
+  .list-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+    transition: opacity 0.5s, transform 0.5s, height 0.5s, display 0.5s allow-discrete;
+    button {
+      margin-left: auto;
+    }
+  }
+
+  
+}
+
+@starting-style {
+  .list-item {
+    opacity: 0;
+    height: 0;
+  }
+}
